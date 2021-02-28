@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+
+</head>
+
+<body>
+    <script>
+
+        console.log(playRPS(computerPlay(), computerPlay()));
+
+        function computerPlay() {
+            var array = ["rock", "paper", "scissors"];
+            var randomIndex = Math.floor(Math.random() * array.length);  //random number
+            var move = array[randomIndex];
+            return move;
+        }
+        function playRPS(move1, move2){
+            if((move1 == "rock" && move2 =="scissors")
+            || (move1 == "paper" && move2 =="rock")
+            || (move1 == "scissors" && move2 =="paper")){
+                return "You win, " + move1 + " beats " + move2; 
+            }else{
+                return "You loose, " + move2 + " beats " + move1; 
+            } 
+        }
+
+
+    </script>
+</body>
+
+</html>
